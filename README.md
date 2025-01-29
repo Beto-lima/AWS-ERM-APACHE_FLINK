@@ -1,4 +1,5 @@
 EMR Cluster Terraform Deployment
+
 This repository contains the Terraform code to provision an EMR Cluster on AWS, configured with Flink and other applications such as Hadoop and Zeppelin. This example serves as a starting point that can easily be adapted to your business needs.
 
 🚀 Overview

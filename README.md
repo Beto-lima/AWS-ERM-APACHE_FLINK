@@ -22,11 +22,11 @@ To build and run the Docker container with the necessary tools:
 
 Step 1: Build the Docker image:
 
-docker build -t <"name of image"> .
+docker build -t "name of image" .
 
 Step 2: Run the Docker container:
 
-docker run -dit --name <"name of container"> -v ./IaC:/iac <"name of image"> /bin/bash
+docker run -dit --name "name of container" -v ./IaC:/iac "name of image" /bin/bash
 
 This command will mount your local iac directory to the /iac folder inside the container, so you can directly work with your Terraform scripts in the containerized environment.
 

@@ -2,6 +2,38 @@ EMR Cluster Terraform Deployment
 
 This repository contains the Terraform code to provision an EMR Cluster on AWS, configured with Flink and other applications such as Hadoop and Zeppelin. This example serves as a starting point that can easily be adapted to your business needs.
 
+🐳 Dockerfile
+This project includes a Dockerfile for creating a development environment with Terraform and AWS CLI pre-installed. It is designed to simplify setting up the required tools for provisioning resources on AWS.
+
+Dockerfile Breakdown
+
+Base Image: Uses the latest version of Ubuntu as the base.
+
+Packages Installed:
+wget, unzip, curl, git, openssh-client, iputils-ping for general utility and connectivity.
+Terraform version 1.10.5 is downloaded, installed, and moved to /usr/local/bin/.
+AWS CLI v2 is also installed to allow direct AWS service interaction from within the container.
+Volume: The /iac directory is exposed as a volume for your Terraform infrastructure-as-code scripts.
+
+How to Build and Run the Docker Image
+
+To build and run the Docker container with the necessary tools:
+Step 1: Build the Docker image:
+
+docker build -t terraform-aws 
+
+Step 2: Run the Docker container:
+
+docker run -it -v $(pwd)/iac:/iac terraform-aws
+
+This command will mount your local iac directory to the /iac folder inside the container, so you can directly work with your Terraform scripts in the containerized environment.
+
+Step 3: Configure AWS CLI inside the container (before running Terraform):
+
+aws configure
+
+This step is mandatory so Terraform can authenticate and provision resources in your AWS account.
+
 🚀 Overview
 The code uses Terraform to provision:
 

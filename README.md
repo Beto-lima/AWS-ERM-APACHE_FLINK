@@ -59,7 +59,7 @@ AWS account with access to the EMR service and permission to create resources.
 ⚙️ How to Use
 Step 1: Clone the Repository
 
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/Beto-lima/AWS-ERM-APACHE_FLINK.git
 cd your-repository
 
 Step 2: Define Variables

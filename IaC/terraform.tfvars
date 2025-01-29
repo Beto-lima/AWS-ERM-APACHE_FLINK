@@ -1,0 +1,8 @@
+region = "us-east-2"
+project = "Flink-Deploy"
+env = "EMR"
+release_label = "emr-7.0.0"
+main_instance_type = "m5.xlarge"
+main_instance_count = "1"
+core_instance_type = "m5.xlarge"
+core_instance_count = "2"

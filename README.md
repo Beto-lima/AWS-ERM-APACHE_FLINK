@@ -19,6 +19,7 @@ Volume: The /iac directory is exposed as a volume for your Terraform infrastruct
 How to Build and Run the Docker Image
 
 To build and run the Docker container with the necessary tools:
+
 Step 1: Build the Docker image:
 
 docker build -t terraform-aws 
